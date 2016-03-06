@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
-require_relative 'environment_config'
+require_relative 'configuration/environment_config'
 
 class EnvironmentGenerator
 
