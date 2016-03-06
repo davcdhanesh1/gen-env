@@ -1,0 +1,12 @@
+#!/usr/bin/env ruby
+
+require_relative '../lib/environment_generator'
+require_relative '../lib/parser'
+
+options = Parser.parse!(ARGV)
+unless Parser.isValid?(options) 
+  Parser.print_usages
+  exit
+end
+
+environment_config = EnvironmentGenerator.new.generate(options)
