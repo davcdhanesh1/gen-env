@@ -1,8 +1,8 @@
 #!/usr/bin/env ruby
 
-module Config
+module Configuration
 
-  class GroupConfig
+  class Group
 
     attr_reader :config_group_hash
 

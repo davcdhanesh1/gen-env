@@ -1,9 +1,9 @@
 #!/usr/bin/env ruby
 require_relative 'group_config'
 
-module Config
+module Configuration
 
-  class EnvironmentConfig
+  class Environment
 
     attr_reader :env_variables
 
@@ -12,7 +12,7 @@ module Config
     end
 
     def configure_group(name, &block)
-      group_config = Config::GroupConfig.new(name)
+      group_config = Configuration::Group.new(name)
       block.call(group_config)
       @env_variables.push(group_config.group_hash)	
     end
