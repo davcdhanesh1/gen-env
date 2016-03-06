@@ -2,15 +2,15 @@
 
 More than often, a typical java project requires you to manage multiple properties or env files across different environments. For example, local.env, sit.env, qa.env etc etc. And there are multiple problems managing these sort of environment files.
 
-#### Problems with multiple .properties file
+#### Problems with multiple .properties/.env files
 
-1. No better mechanism of logically grouping multiple entries in .env file, other than developer's discipline. For example, order of individual configurations for database, load-balancer etc. can vary a lot from one environment to other.
-2. It becomes difficult and cumbersome to find a single entry in all properties file and change it without juggling with your favorite editor's find and replace feature.
-3. No way of testing if a particular variable is available in the corresponding .env / .properties file other than manually doing grep on the file. This can cause lots of surprises when you actually deploy an app in environment.
+1. No better mechanism of logically grouping multiple key/value pairs in .properties/.env file, other than developer's discipline. For example, order of individual configurations for database, load-balancer etc. can vary a lot from one environment's configuration file to other's.
+2. It becomes difficult and cumbersome to find a single key/value pair in all .properties/.env file and change it without juggling with your favorite editor's find and replace feature.
+3. No way of testing if a particular key/value pair is available in the corresponding .properties/.env file other than manually doing grep on the file. This can cause lots of surprises when you actually deploy an app in environment.
 
 #### Solutions to above problems
-1. A simple DSL that can logically group different configurations and produce the final env / property file in same order across multiple environment.
-2. Rather than managing .env / .properties files in plain text files, an ability to write your .env / .properties in ruby language allows you to unit test your configuration files for presence or absense of particular key/value pair.
+1. A simple DSL that can logically group different configurations and produce the final .properties/.env file having same order of key/value pair for different configurations across multiple environments.
+2. Rather than managing .properties/.env files in plain text files, an ability to write your configurations in ruby language allows you to unit test your configuration files for presence or absense of particular key/value pair.
 
 ## Installation
 
