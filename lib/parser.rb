@@ -7,7 +7,7 @@ class Parser
     options = {}
     opt_parser = OptionParser.new do |opt_parser|
       
-      opt_parser.banner = "Usage: generate_env --in /path/to/input/environment.rb --out /path/to/output/environment.env" 
+      opt_parser.banner = "Usage: gen-env --in /path/to/input/environment.rb --out /path/to/output/environment.env" 
       
       opt_parser.on("-iNAME", "--in INPUT_FILE", "Input ruby file path") do |input_environment_file_path|
         options[:input_environment_file_path] = input_environment_file_path
